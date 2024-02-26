@@ -1,0 +1,22 @@
+Notes design Weather APP:
+
+-Conflit entre script JS dans code html et script en lien src (l'un marche et l'autre non)
+
+-Rajouter les icons pour la météo du jour
+
+-Rajouter une page Not-Found
+
+-Rajouter code JSON pour récupérer données de la ville locale avec capteur
+
+-Mettre sur serveur apache le site grâce à PI ? API ?
+
+
+-Dans météo du jour: en haut la météo du jour, en-dessous les prévision et à droite l'historique
+
+-Dans Favoris, ajouter et afficher les villes sélectionnées
+
+-Voir comment faire pour l'historique
+
+
+
+Tuto à suivre sur Youtube, Codehal "Weather App using HTML CSS & Javascript"

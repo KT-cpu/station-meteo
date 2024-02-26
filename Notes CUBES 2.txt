@@ -1,0 +1,89 @@
+Notes CUBES 2:
+
+-Il y a du matériel dans la boîte qui n'aura pas besoin d'être utilisé --> il faudra faire le tri
+
+-GPIO: general purpose input/output
+-PWM: pulse width modulation --> sortie qui prend tout les niveaux entre 0 et 5 volts.
+-SDA: Serial data
+-SCL: Serial clock
+  --> Il faudra faire en sorte que le capteur utilise SCL ?
+
+-Utiliser une breadboard pour faire les connections au Raspberry ?
+  --> Tous les premiers points sont reliés entre eux (à l'horizontal, de a à e)
+  --> Ligne des + qui sont tous reliés entre eux (à la verticale). Pareil pour les moins
+
+-Utiliser Ngrok pour travailer avec les autres. Ouvre un "tunnel" éphémère permettant aux autres d'accéder à la base de données
+  --> Localtunnel est un équivalent à ngrok
+
+-Le Raspberry sera là où il y aura le programme. Le site web sera sur PC
+
+-Mettre en place un petit écran LCD sur le Rasp
+
+-Capteur branché au Rasp
+
+-Seul lien utile est capteur tech
+
+-Aller pêcher les infos dans Open Weather APP
+
+-Analyse analogique sur 0 sur arduino
+
+-Avec la photorésistance, tout l'arduino ne marche pas dans le noir
+
+-Crontab: gestionnaire de tâche
+  --> taper la ligne avec les étoiles pour que notre script de météo se lance toutes les minutes
+       --> Pas trop de données ? --> Il faudra voir et pourra être une question à l'oral
+
+
+-Aller sur le site Tinkercard, pour tester comment ça marche les breadboard et les connections
+
+-Se connecter avec ssh pour Raspberry puis après ça sera juste un terminal linux
+
+
+-Sur schéma arduino photorésistance, la deuxième résistance sert comme barrière. Sans lui le circuit pourrait détecter des ondes venant de machines proches et donc s'allumer tout seul.
+La deuxième résistance sert donc de barrière contre ça 
+  --> Pas besoin de rajouter une deuxième résistance car notre capteur (carte bleue) fera déjà le blocage
+
+
+Sur arduino serial begin, sert à démarrer qqch ???
+
+
+
+-Que 3 objets : -concevoir une maquette fonctionnelle de l'application web de visualisation des données
+                -sonde météo
+                -serveur de collecte de données
+
+
+-2 entrées dans la base de données
+
+-Demandes pour la DB
+
+-On reste avec Pau comme ville test --> passera peut-être à l'Insee plus tard dans la DB
+
+-HTML, CSS, Javascript pour site web 
+  --> Rajouter un Flex pour que ça puisse être vu sur tel et tablette comme PC
+
+-Ajouter Clé SSH, chroot
+  --> Vérifier les droits des fichiers afin de pas être bloqué
+
+-Dans le futur powerpoint, ajouter graphique de notre algorithme + schéma fonctionel
+
+
+
+Sources (enregistrées dans Cubes 2 google):
+
+-Insee Villes France
+-PHPMyAdmin
+-Ngrok
+-Bases de données et langage SQL (developpez.com)
+-Raspberry Pi Documentation
+-How to connect an adapter lcd to a breadboard
+-Module alimentation planche à pain
+-Bme280pi 1.1.0 (pypi.org)
+-Comment connecter un écran LCD à un RAspberry Pi (freva.com)
+-python_lcd (github.com)
+-Partners and solutions (Open Weather Map)
+-DzikuVx / raspberry_temperature_log (github.com)
+-One Call API 2.5 (Open Weather Map)
+-How to display openweathermap weather icon (stackoverflow.com)
+-Pip (google)
+
