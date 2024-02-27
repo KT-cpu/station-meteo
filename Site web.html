@@ -7,7 +7,7 @@
 
 
 <link rel="stylesheet" href="CSS stylesheet.css">
-<link rel="script" href="C:\Users\33627\Desktop\CESI\Cubes 2\Projet Cube\script.js">
+<link rel="script" href="script.js">
 <!-- Boxicon CDN Link -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -74,60 +74,80 @@
     </div>
     <hr style="margin: 10px 0 15px 0;">
    <h2 style="color:white;"> Prévisions </h2>
+   <div class="future-forecast">
+     <div class="today" id="current-temp">
+       
+       <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+       <div class="other">
+        <div class="day">Lundi</div>
+        <div class="temp">Night - 25.6°C</div>
+       <div class="temp">Day - 35.6°C</div>
+       </div>
+       
+     </div>
      <div class="weather-forecast" id="weather-forecast">
       <div class="weather-forecast-item">
       <div class="day">Mardi</div>
-      <div class="temp">Night - 25.6°C</div>
+      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+      <div class="temp">Night - 25.6°C</div><br>
       <div class="temp">Day - 35.6°C</div>
-</div>
+     </div></div>
      <div class="weather-forecast" id="weather-forecast">
       <div class="weather-forecast-item">
       <div class="day">Mercredi</div>
-      <div class="temp">Night - 25.6°C</div>
+      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+      <div class="temp">Night - 25.6°C</div><br>
       <div class="temp">Day - 35.6°C</div>
-</div>
+     </div></div>
      <div class="weather-forecast" id="weather-forecast">
       <div class="weather-forecast-item">
       <div class="day">Jeudi</div>
-      <div class="temp">Night - 25.6°C</div>
+      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+      <div class="temp">Night - 25.6°C</div><br>
       <div class="temp">Day - 35.6°C</div>
-</div>
+     </div></div>
      <div class="weather-forecast" id="weather-forecast">
       <div class="weather-forecast-item">
       <div class="day">Vendredi</div>
-      <div class="temp">Night - 25.6°C</div>
+      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+      <div class="temp">Night - 25.6°C</div><br>
       <div class="temp">Day - 35.6°C</div>
-</div>
+     </div></div>
      <div class="weather-forecast" id="weather-forecast">
       <div class="weather-forecast-item">
       <div class="day">Samedi</div>
-      <div class="temp">Night - 25.6°C</div>
+      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+      <div class="temp">Night - 25.6°C</div><br>
       <div class="temp">Day - 35.6°C</div>
-</div>
+     </div></div>
      <div class="weather-forecast" id="weather-forecast">
       <div class="weather-forecast-item">
       <div class="day">Dimanche</div>
-      <div class="temp">Night - 25.6°C</div>
+      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+      <div class="temp">Night - 25.6°C</div><br>
       <div class="temp">Day - 35.6°C</div>
-</div>
-</div>
-</div>
+     </div></div>
+   </div>
+ </div>
 
   <div class="column right">
    <h2 style="color:white;"> Historique </h2>
   </div>
-  <script> 
-let btn = document.querySelector("#btn");
+</div>
+
+<script> 
+ let btn = document.querySelector("#btn");
   let sidebar = document.querySelector(".sidebar");
   let searchBtn = document.querySelector(".bx-search");
 
   btn.onclick = function() {
    sidebar.classList.toggle("active");
-}
+ }
 
-  searchBtn.onclick ="fetchData()" {
+  searchBtn.onclick =function() {
    sidebar.classList.toggle("active");
-}
+ }
+
 </script>
 </body>
 </html>
