@@ -1,3 +1,8 @@
+<?php
+  require("./db_config.php");
+?>
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -33,7 +38,10 @@
           <li>
             <a>
               <i class='bx bx-search' ></i>
-              <input type="text" placeholder="Search...">
+              <form action="" method="get">
+                <input type="text" name='ville' id="ville" placeholder="Search...">
+                <input type="submit" hidden="hidden" > 
+              </form>
             </a>
           </li>
           <li>
@@ -119,6 +127,26 @@
 
     <div class="column right">
       <h2 style="color:white;"> Historique </h2>
+        <?php 
+        if(isset($_GET['ville']) )
+        {
+          $temps = array();
+
+          if($temps = $mysqli->query (
+            "SELECT * FROM `temp`
+            WHERE temp.ville = '". $_GET["ville"] ."'
+            ORDER BY temp.date DESC
+            LIMIT 5;"
+          ))  
+          {
+            foreach ($temps as $temp) {
+              echo '<p> Ville : '. $temp["ville"] . ' Température : '. $temp['temp_capteur'] . '°C </p>';
+            }
+          }
+
+        }
+          
+        ?>  
     </div>
     <script> 
       let btn = document.querySelector("#btn");
