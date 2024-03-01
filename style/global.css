@@ -1,5 +1,4 @@
-<style>
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,13 +13,13 @@ body {
   background-color: #09304f;
 }
 
-header .text-content{
+header .text-content {
   width: 40%;
   margin: 30px 0 0 150px;
   color: #fff;
 }
 
-.sidebar{
+.sidebar {
   position: fixed;
   top: 0;
   left: 0;
@@ -33,11 +32,11 @@ header .text-content{
   z-index: 7;
 }
 
-.sidebar.active{
+.sidebar.active {
   width: 240px;
 }
 
-.sidebar .logo_content .logo{
+.sidebar .logo_content .logo {
   color: #fff;
   display: flex;
   height: 50px;
@@ -47,22 +46,22 @@ header .text-content{
   pointer-events: none;
 }
 
-.sidebar.active .logo_content .logo{
+.sidebar.active .logo_content .logo {
   opacity: 1;
   pointer-events: none;
 }
 
-.logo_content .logo i{
+.logo_content .logo i {
   font-size: 28px;
   margin-right: 5px;
 }
 
-.logo_content .logo .logo_name{
+.logo_content .logo .logo_name {
   font-size: 20px;
   font-weight: 400;
 }
 
-.sidebar #btn{
+.sidebar #btn {
   position: absolute;
   color: #fff;
   left: 50%;
@@ -75,15 +74,15 @@ header .text-content{
   transform: translateX(-50%);
 }
 
-.sidebar.active #btn{
+.sidebar.active #btn {
   left: 200px;
 }
 
-.sidebar ul{
+.sidebar ul {
   margin-top: 20px;
 }
 
-.sidebar ul li{
+.sidebar ul li {
   position: relative;
   height: 50px;
   width: 100%;
@@ -92,7 +91,7 @@ header .text-content{
   line-height: 50px;
 }
 
-.sidebar ul li i{
+.sidebar ul li i {
   position: absolute;
   display: flex;
   color: #fff;
@@ -106,25 +105,25 @@ header .text-content{
   transform: translateY(-50%);
 }
 
-.sidebar .links_name{
+.sidebar .links_name {
   pointer-events: none;
   opacity: 0;
 }
 
-.sidebar.active .links_name{
+.sidebar.active .links_name {
   pointer-events: auto;
   opacity: 1;
 }
 
-.sidebar ul li .tooltip{
+.sidebar ul li .tooltip {
   position: absolute;
   left: 122px;
   top: 0;
+  background: #fff;
   transform: translateY(-50%);
   border-radius: 6px;
   height: 35px;
   width: 122px;
-  background: #fff;
   line-height: 35px;
   text-align: center;
   box-shadow: 0.5px 10px rgba(0, 0, 0, 0.2);
@@ -133,17 +132,17 @@ header .text-content{
   pointer-events: none;
 }
 
-.sidebar.active ul li .tooltip{
+.sidebar.active ul li .tooltip {
   display: none;
 }
 
-.sidebar ul li:hover .tooltip{
+.sidebar ul li:hover .tooltip {
   transition: all 0.5 ease;
   opacity: 1;
   top: 50%;
 }
 
-.sidebar ul li input{
+.sidebar ul li input {
   position: absolute;
   height: 100%;
   width: 90%;
@@ -175,22 +174,14 @@ header .text-content{
   opacity: 1;
 }
 
-.sidebar ul li .bx-search{
+.sidebar ul li .bx-search {
   position: absolute;
   color: #fff;
   font-size: 22px;
   margin: 0 70px 0 0;
 }
 
-.sidebar ul li .bx-search:hover{
-  background: #fff;
-  color: #09304f;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-} 
-
-.sidebar ul li a{
+.sidebar ul li a {
   color: #fff;
   display: flex;
   align-items: center;
@@ -200,12 +191,12 @@ header .text-content{
   white-space: nowrap;
 }
 
-.sidebar ul li a:hover{
+.sidebar ul li a:hover {
   color: #09304f;
   background: #fff;
 }
 
-.sidebar ul li a i{
+.sidebar ul li a i {
   position: absolute;
   color: #fff;
   left: 0%;
@@ -226,7 +217,7 @@ header .text-content{
 
 .left {
   height: 80vh;
-  width: 80%;
+  width: 65%;
   float: left;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
@@ -237,15 +228,98 @@ header .text-content{
   border-radius: 25px;
 }
 
+.weather-box img {
+  width: 13%;
+  margin: 20px 0 0 10px;
+}
 
-hr { 
+.weather-box {
+  text-align: center;
+  color: #fff;
+}
+
+.weather-box .description {
+  position: relative;
+  color: #fff;
+  line-height: 1;
+  font-weight: 700;
+  margin: 15px 0 0 20px;
+}
+
+.weather-box .temperature {
+  position: relative;
+  color: #fff;
+  line-height: 1;
+  font-weight: 700;
+  margin: 15px 0 0 20px;
+}
+
+.weather-box .humidity {
+  position: relative;
+  color: #fff;
+  line-height: 1;
+  font-weight: 700;
+  margin: 15px 0 0 20px;
+}
+
+.weather-box .wind {
+  position: relative;
+  color: #fff;
+  line-height: 1;
+  font-weight: 700;
+  margin: 15px 0 0 20px;
+}
+
+.current-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.future-forecast {
+  padding: 25px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  color: #fff;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.future-forecast.weather-forecast {
+  display: flex;
+  color: #fff;
+}
+
+.right {
+  height: 40vh;
+  width: 17%;
+  float: right;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  margin: 20px 50px 450px 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+}
+
+.right h2 {
+  margin: 30px 20px;
+}
+
+.right p {
+  margin: 15px 0 0 10px;
+  color: rgb(206, 206, 206);
+}
+
+hr {
   display: block;
-  margin-top: 20em;
+  margin-top: 18em;
   margin-bottom: 0.5em;
   margin-left: auto;
   margin-right: auto;
   border-style: inset;
   border-width: 1px;
-} 
-
-</style>
+}

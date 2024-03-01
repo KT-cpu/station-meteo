@@ -1,5 +1,3 @@
-const days = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
-
 const mainWeatherItemsEl = document.getElementById('main-weather-items');
 const API_KEY ='6fccd5f02f1598bf9a7c9826cfd7d639';
 
@@ -15,7 +13,6 @@ function fetchData (){
 });
 };
 
-document.getElementById("search").addEventListener("click" , fetchData);
 
 function showWeatherData (data){
     let {feels_like, humidity} = data.main;
@@ -27,7 +24,7 @@ function showWeatherData (data){
   
     mainWeatherItemsEl.innerHTML =
      `<div class="weather">
-         <img src="https://openweathermap.org/img/wn/{icon}.png" alt="weather icon" class="w-icon">
+         <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="weather icon" class="w-icon">
      </div>
 
      <div class="weather-item">
@@ -46,3 +43,5 @@ function showWeatherData (data){
          <div>${wind_speed}</div>
      </div>`;
 }
+
+document.getElementById("search").addEventListener("click" , fetchData);
