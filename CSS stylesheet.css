@@ -309,6 +309,7 @@ header .text-content{
   text-align: center;
   outline: solid #164e7a;
   margin: 10px;
+  display: flex;
 }
 
 .future-forecast .today .temp{
@@ -337,14 +338,76 @@ header .text-content{
   border-radius: 50px;
   text-align: center;
   outline: solid #164e7a;
+  display: flex;
 }
 
 @media only screen and (max-width: 730px){
-  .future-forecast{
-    justify-content: start;
-    align-items: none;
-    overflow-y: scroll;
-  }
+  .current-info{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ }
+
+.future-forecast{
+  padding: 0 0;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  color: #fff;
+  width: 100%;
+  align-items: none;
+  justify-content: start;
+  overflow-y: scroll;
+ }
+
+.future-forecast .today{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10 0 0 10px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  margin: 20px 10px 20px;
+ }
+
+.future-forecast .today .day{
+  padding: 7px 10px;
+  background: #164e7a;
+  border-radius: 40px;
+  text-align: center;
+  outline: solid #164e7a;
+  margin: 10px;
+  display: flex;
+ }
+
+.future-forecast .today .temp{
+  font-size: 20px;
+  padding-top: 15px;
+ }
+
+.future-forecast .weather-forecast{
+  display: flex;
+ }
+
+.weather-forecast .weather-forecast-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 5px;
+ }
+
+.weather-forecast .weather-forecast-item .day{
+  padding: 5px 15px;
+  background: #164e7a;
+  border-radius: 50px;
+  text-align: center;
+  outline: solid #164e7a;
+  display: flex;
+ }
 }
 
 .right {
@@ -370,5 +433,12 @@ hr {
   border-width: 1px;
 } 
 
+
+@media only screen and (max-width: 1000px){
+  .future-forecast{
+    align-items: none;
+    justify-content: start;
+    overflow-y: scroll;
+}
 
 </style>
