@@ -293,7 +293,7 @@ header .text-content {
 }
 
 .right {
-  height: 80vh;
+  height: 40vh;
   width: 17%;
   float: right;
   background: rgba(255, 255, 255, 0.1);
@@ -303,6 +303,15 @@ header .text-content {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 25px;
+}
+
+.right h2 {
+  margin: 30px 20px;
+}
+
+.right p {
+  margin: 15px 0 0 10px;
+  color: rgb(206, 206, 206);
 }
 
 hr {
