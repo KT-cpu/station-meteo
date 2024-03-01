@@ -138,6 +138,7 @@
               echo "<p class = 'temp_int'> ". $temp['date'] ." : " . $temp['temp_int'] . "°C </p>";
             }
           }
+
           
         ?>  
     </div>
