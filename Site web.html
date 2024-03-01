@@ -7,7 +7,7 @@
 
 
 <link rel="stylesheet" href="CSS stylesheet.css">
-<link rel="script" href="script.js">
+
 <!-- Boxicon CDN Link -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -17,7 +17,7 @@
 <div id="container">
  <header>
    <div class="text-content">
-    <h1>Météo du jour</h1>
+    <h1>Météo</h1>
      </div>
     </div>
   </div>  
@@ -36,14 +36,14 @@
       <li>
        <a>
         <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
+         <input type="text" placeholder="Search..." id="inputt">
        </a>
       <li>
        <a href="C:\Users\33627\Desktop\CESI\Cubes 2\Projet Cube\Site web.html">
         <i class='bx bxs-sun' ></i>
-         <span class="links_name">Meteo du jour</span>
+         <span class="links_name">Meteo</span>
        </a>
-        <span class="tooltip">Meteo du jour</span>
+        <span class="tooltip">Meteo</span>
       </li>
       <li>
        <a href="C:\Users\33627\Desktop\CESI\Cubes 2\Projet Cube\Favoris.html">
@@ -63,69 +63,17 @@
       <div class="info-weather">
        <div class="weather">
          <img src="C:\Users\33627\Desktop\CESI\Cubes 2\icons8-soleil-emoji-96.png">
-          <p class="description">Sunny</span></p>
-          <p class="temperature">16<span>°C</span></p>
-          <p class="humidity">Humidité: 30%</p>
-          <p class="wind">Vent: 20 km/h</p>
-          <br>
+          <div class="others" id="main-weather-items">
+          </div>
+
        </div>
       </div>
      </div>
     </div>
     <hr style="margin: 10px 0 15px 0;">
-   <h2 style="color:white;"> Prévisions </h2>
-   <div class="future-forecast">
-     <div class="today" id="current-temp">
        
        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-       <div class="other">
-        <div class="day">Lundi</div>
-        <div class="temp">Night - 25.6°C</div>
-       <div class="temp">Day - 35.6°C</div>
-       </div>
        
-     </div>
-     <div class="weather-forecast" id="weather-forecast">
-      <div class="weather-forecast-item">
-      <div class="day">Mardi</div>
-      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-      <div class="temp">Night - 25.6°C</div><br>
-      <div class="temp">Day - 35.6°C</div>
-     </div></div>
-     <div class="weather-forecast" id="weather-forecast">
-      <div class="weather-forecast-item">
-      <div class="day">Mercredi</div>
-      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-      <div class="temp">Night - 25.6°C</div><br>
-      <div class="temp">Day - 35.6°C</div>
-     </div></div>
-     <div class="weather-forecast" id="weather-forecast">
-      <div class="weather-forecast-item">
-      <div class="day">Jeudi</div>
-      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-      <div class="temp">Night - 25.6°C</div><br>
-      <div class="temp">Day - 35.6°C</div>
-     </div></div>
-     <div class="weather-forecast" id="weather-forecast">
-      <div class="weather-forecast-item">
-      <div class="day">Vendredi</div>
-      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-      <div class="temp">Night - 25.6°C</div><br>
-      <div class="temp">Day - 35.6°C</div>
-     </div></div>
-     <div class="weather-forecast" id="weather-forecast">
-      <div class="weather-forecast-item">
-      <div class="day">Samedi</div>
-      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-      <div class="temp">Night - 25.6°C</div><br>
-      <div class="temp">Day - 35.6°C</div>
-     </div></div>
-     <div class="weather-forecast" id="weather-forecast">
-      <div class="weather-forecast-item">
-      <div class="day">Dimanche</div>
-      <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-      <div class="temp">Night - 25.6°C</div><br>
-      <div class="temp">Day - 35.6°C</div>
      </div></div>
    </div>
  </div>
@@ -144,10 +92,9 @@
    sidebar.classList.toggle("active");
  }
 
-  searchBtn.onclick =function() {
-   sidebar.classList.toggle("active");
- }
+  searchBtn.onclick ="fetchData()";
 
 </script>
+<script src="script.js"></script>
 </body>
 </html>
