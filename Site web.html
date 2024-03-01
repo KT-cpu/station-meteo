@@ -35,8 +35,8 @@
      </li>
       <li>
        <a>
-        <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search..." id="inputt">
+        <i class='bx bx-search' id="search"></i>
+        <input type="text" placeholder="Search..." id="inputt">
        </a>
       <li>
        <a href="C:\Users\33627\Desktop\CESI\Cubes 2\Projet Cube\Site web.html">
@@ -62,7 +62,6 @@
      <div class="box">
       <div class="info-weather">
        <div class="weather">
-         <img src="C:\Users\33627\Desktop\CESI\Cubes 2\icons8-soleil-emoji-96.png">
           <div class="others" id="main-weather-items">
           </div>
 
@@ -72,14 +71,12 @@
     </div>
     <hr style="margin: 10px 0 15px 0;">
        
-       <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-       
      </div></div>
    </div>
  </div>
 
   <div class="column right">
-   <h2 style="color:white;"> Historique </h2>
+   <h2 style="color:white;"> Météo  </h2>
   </div>
 </div>
 
@@ -91,8 +88,7 @@
   btn.onclick = function() {
    sidebar.classList.toggle("active");
  }
-
-  searchBtn.onclick ="fetchData()";
+   
 
 </script>
 <script src="script.js"></script>
